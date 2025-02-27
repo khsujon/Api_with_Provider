@@ -1,4 +1,6 @@
+import 'package:api_with_provider/todo_screen.dart';
 import 'package:api_with_provider/providers/user_provider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -48,6 +50,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 });
           }
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TodoScreen(),
+              ));
+        },
+        child: Icon(CupertinoIcons.arrow_right),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:api_with_provider/home_scren.dart';
+import 'package:api_with_provider/providers/todo_provider.dart';
 import 'package:api_with_provider/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -8,6 +9,7 @@ void main() {
     ChangeNotifierProvider(
       create: (_) => UserProvider(),
     ),
+    ChangeNotifierProvider(create: (_) => TodoProvider()),
   ], child: const MyApp()));
 }
 
